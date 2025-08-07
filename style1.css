@@ -1,0 +1,195 @@
+/* Funny Blog CSS - Enter at your own risk */
+
+body {
+    background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00);
+    animation: bgShift 5s infinite linear;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: lime;
+    text-shadow: 1px 1px 0 black;
+}
+
+@keyframes bgShift {
+    0% { background-position: 0 0; }
+    100% { background-position: 1000px 1000px; }
+}
+
+header {
+    background: repeating-linear-gradient(45deg, red, yellow 10px, green 20px);
+    text-align: center;
+    padding: 20px;
+    animation: shake 0.3s infinite;
+}
+
+@keyframes shake {
+    0% { transform: rotate(-2deg); }
+    50% { transform: rotate(2deg); }
+    100% { transform: rotate(-2deg); }
+}
+
+.highlight {
+    color: hotpink;
+    background-color: black;
+    padding: 0 5px;
+    animation: rainbow 2s infinite linear;
+}
+
+@keyframes rainbow {
+    0% { color: red; }
+    25% { color: orange; }
+    50% { color: green; }
+    75% { color: blue; }
+    100% { color: violet; }
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    border: 10px dotted magenta;
+    animation: spinBorder 10s infinite linear;
+}
+
+@keyframes spinBorder {
+    0% { border-color: magenta; }
+    50% { border-color: cyan; }
+    100% { border-color: lime; }
+}
+
+.left-column, .sidebar {
+    width: 48%;
+    background: #f0f8ff;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px pink;
+    transform: rotate(1deg);
+}
+
+.post-card {
+    margin-bottom: 20px;
+    background-color: yellow;
+    border: 5px dashed red;
+    animation: wobble 2s infinite;
+}
+
+@keyframes wobble {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(1deg); }
+    50% { transform: rotate(-1deg); }
+    75% { transform: rotate(1deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.post-card img {
+    width: 100%;
+    border-radius: 10px;
+    filter: hue-rotate(180deg);
+    animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.post-title {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: hotpink;
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color: white;
+    padding: 10px;
+    border: 3px groove lime;
+    font-weight: bold;
+}
+
+.read-more {
+    background: red;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 16px;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); background-color: red; }
+    50% { transform: scale(1.2); background-color: purple; }
+    100% { transform: scale(1); background-color: red; }
+}
+
+.comments {
+    color: yellow;
+    font-size: 20px;
+    animation: spinY 2s linear infinite;
+}
+
+@keyframes spinY {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+.profile-box img,
+.popular-posts img {
+    width: 100px;
+    border-radius: 50%;
+    animation: wiggle 1s infinite;
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(0); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+    100% { transform: rotate(0); }
+}
+
+.popular-posts .heading,
+.tags-box .heading {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(to right, #ff0000, #ffff00, #00ff00);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: zoom 1s infinite alternate;
+}
+
+@keyframes zoom {
+    from { transform: scale(1); }
+    to { transform: scale(1.2); }
+}
+
+.tag {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    background: pink;
+    border-radius: 15px;
+    font-size: 14px;
+    animation: floatTag 2s infinite ease-in-out;
+}
+
+@keyframes floatTag {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.tag.active {
+    background-color: red;
+    color: yellow;
+    font-weight: bold;
+    border: 2px dashed purple;
+}
